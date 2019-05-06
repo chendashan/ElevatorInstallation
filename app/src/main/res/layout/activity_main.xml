@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/ab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RadioGroup
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <RadioButton
+            android:id="@+id/rb_bottom_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/bottom_bar_margin"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/selector_bottom_bar_back"
+            android:textSize="@dimen/bottom_bar_text_size"
+            android:textColor="@drawable/selector_bottom_bar_text"
+            android:text="焊接"/>
+
+        <RadioButton
+            android:id="@+id/rb_bottom_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/bottom_bar_margin"
+            android:gravity="center"
+            android:background="@drawable/selector_bottom_bar_back"
+            android:button="@null"
+            android:textSize="@dimen/bottom_bar_text_size"
+            android:textColor="@drawable/selector_bottom_bar_text"
+            android:text="加工"/>
+
+        <RadioButton
+            android:id="@+id/rb_bottom_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/bottom_bar_margin"
+            android:gravity="center"
+            android:background="@drawable/selector_bottom_bar_back"
+            android:button="@null"
+            android:textSize="@dimen/bottom_bar_text_size"
+            android:textColor="@drawable/selector_bottom_bar_text"
+            android:text="安装"/>
+
+        <RadioButton
+            android:id="@+id/rb_bottom_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/bottom_bar_margin"
+            android:gravity="center"
+            android:background="@drawable/selector_bottom_bar_back"
+            android:button="@null"
+            android:textSize="@dimen/bottom_bar_text_size"
+            android:textColor="@drawable/selector_bottom_bar_text"
+            android:text="视频"/>
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/ll_bottom_bar"
+        android:background="#EEEEEE"/>
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ab_layout"
+        android:layout_above="@id/ll_bottom_bar"
+        android:visibility="gone"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ab_layout"
+        android:layout_above="@id/ll_bottom_bar"/>
+
+
+</RelativeLayout>
